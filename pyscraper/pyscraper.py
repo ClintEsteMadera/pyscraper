@@ -9,7 +9,14 @@ import urllib.request
 
 class HtmlElementsCounter(html.parser.HTMLParser):
     """
-    Specialized subclass of HTMLParser, which keeps track of HTML elements found in the input
+    Specialized subclass of HTMLParser, which keeps track of HTML elements found in the input.
+    The reason I went with this approach, is because HTML pages have a lot of gotchas to consider (e.g. DOCTYPE
+    declarations, tags that are opened but not closed, etc.) and parsing the input manually (for example, using a Regex)
+    would have been re-inventing the wheel. I assumed that for HTMLParser to be part of the standard libraries in Python,
+    it must have been proven enough, both functionally speaking but also performance-wise. Internally, it does, though,
+    perform more operations than strictly needed for this challenge but I decided to give it a go anyway as that overhead
+    is negligible, considering the size of the problem we are solving. If this "scraper" would be used in the context,
+    for instance, of a web spider or with a high volume of data, I would seriously reconsider this choice.
     """
 
     def __init__(self):
