@@ -32,7 +32,7 @@ Context
 
 This script was created in the context of a code challenge that a company asked me to do. These are the exact requirements:
 
-Build a web page scraper in python that generates some basic metrics about a given page.
+    Build a web page scraper in python that generates some basic metrics about a given page.
 
     Requirements:
 
@@ -96,7 +96,7 @@ Just run the following:
     make test
 
 Note: you might see there is a warning that was intentionally omitted (``pytest --disable-pytest-warnings``) as I could
-not easily (properly) fix it. Some hint of why this warning might be being triggered:
+not easily (properly) fix it.
 
 Credits
 -------
