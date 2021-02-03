@@ -61,6 +61,31 @@ If you are interested in running code coverage (currently at 100%), lint or api-
 * coverage (``pip install coverage``)
 * sphinx (``pip install sphinxcontrib-apidoc``)
 
+Virtual Environment
+-------------------
+
+Although optional, using a virtual environment is highly recommended. To manage these virtual environments, if you haven't
+already done so, please install pyenv:
+
+``brew install pyenv pyenv-virtualenv``
+
+You then need to add this to ``.bashrc``:
+
+::
+
+    if command -v pyenv 1>/dev/null 2>&1; then
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)"
+    fi
+
+
+Then run ``pyenv versions`` to know which Python versions you've got already. Choose any Python 3+ for basing the
+virtualenv you will create. For example:
+
+``pyenv virtualenv system-3.8.2 pyscraper``
+
+Now run ``pip install -r requirements_dev.txt`` and you should be good to go.
+
 Note that there is a ``Makefile`` that has several goals to accomplish these tasks.
 
 Script Usage
